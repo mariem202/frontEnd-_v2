@@ -1,0 +1,17 @@
+.search-hero {
+    width: 400px;
+    padding-bottom: 50px;
+    margin:auto;
+
+  }
+  nav {
+   /* background:#eee;*/
+  }
+
+  .form-control{
+    width: 400px;
+  }
+  .input-group{
+
+    margin-top: 1%;
+  }
