@@ -27,14 +27,14 @@
               </ng-template>
               <br>
               <!--frorm 1 -->
-              <form  name="loginEntrepris" #loginEntreprise="ngForm" class="example-form">
+              <form  [formGroup]="LoginEntreprise" (ngSubmit)="LogEntreprise()" class="example-form">
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Email</mat-label>
-                  <input matInput class="form-control" type="email" placeholder="Email" required="" >
+                  <input matInput class="form-control" type="email" formControlName="emailEntreprise" placeholder="Email" required="" >
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Password</mat-label>
-                  <input matInput class="form-control" type="password" placeholder="Password" required="" id="ent-email-log">
+                  <input matInput formControlName="passwordEntreprise"type="password" placeholder="Password" required="" id="ent-email-log">
                 </mat-form-field>
                 <div class="d-flex flex-wrap justify-content-between">
                   <div class="custom-control custom-checkbox">
@@ -56,55 +56,51 @@
               </ng-template>
               <br>
               <!--frorm 2 -->
-              <form name="signupFormEntreprise" #signupFormEntreprise="ngForm" class="example-form" >
+              <form [formGroup]="signupFormEntreprise" (ngSubmit)="signupEntreprise()" >
                 <mat-form-field class="example-full-width" appearance="fill">
-                  <mat-label>First Name</mat-label>
-                  <input matInput class="form-control" type="text" placeholder="first name" required="" id="ent-firstName">
+                  <mat-label>Full Name</mat-label>
+                  <input matInput  formControlName="Name" type="text" placeholder="first name" required="" id="ent-firstName">
                   <div class="invalid-feedback">Please enter your first name!</div>
                 </mat-form-field>
-                <mat-form-field class="example-full-width" appearance="fill">
-                  <mat-label>Last Name</mat-label>
-                  <input matInput class="form-control" type="text" placeholder="last name" required="" id="ent-lastName">
-                  <div class="invalid-feedback">Please enter your last name!</div>
-                </mat-form-field>
+
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Email Address</mat-label>
-                  <input matInput class="form-control" type="email" placeholder="First-name" required="" id="ent-email">
+                  <input matInput formControlName="emailEntreprise" type="email" placeholder="First-name" required="" id="ent-email">
                   <div class="invalid-feedback">Please enter your adress email!</div>
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Phone Number</mat-label>
-                  <input matInput class="form-control" type="number" placeholder="First-name" required="" id="ent-phone">
+                  <input matInput formControlName="phoneNumber" type="number" placeholder="First-name" required="" id="ent-phone">
                   <div class="invalid-feedback">Please enter your phone number!</div>
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Country</mat-label>
-                  <input matInput class="form-control" type="text" placeholder="First-name" required="" id="ent-country">
+                  <input matInput formControlName="country" type="text" placeholder="First-name" required="" id="ent-country">
                   <div class="invalid-feedback">Please enter your Country!</div>
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Entreprise Name</mat-label>
-                  <input matInput class="form-control" type="text" placeholder="First-name" required="" id="ent-entName">
+                  <input matInput formControlName="EntrepriseName" type="text" placeholder="First-name" required="" id="ent-entName">
                   <div class="invalid-feedback">Please enter the name of your Entreprise!</div>
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Address</mat-label>
-                  <input matInput class="form-control" type="text" placeholder="First-name" required="" id="ent-address">
+                  <input matInput formControlName="address" type="text" placeholder="First-name" required="" id="ent-address">
                   <div class="invalid-feedback">Please enter your address!</div>
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Postal Code</mat-label>
-                  <input matInput class="form-control" type="number" placeholder="First-name" required="" id="ent-postal">
+                  <input matInput formControlName="codePostal" type="number" placeholder="First-name" required="" id="ent-postal">
                   <div class="invalid-feedback">Please enter your postal code!</div>
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Password</mat-label>
-                  <input matInput class="form-control" type="password" placeholder="Password" required="" id="ent-password">
+                  <input matInput formControlName="passwordEntreprise" type="password" placeholder="Password" required="" id="ent-password">
                   <div class="invalid-feedback">Please enter password!</div>
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Confirm Password</mat-label>
-                  <input matInput class="form-control" type="password" placeholder="Password" required="" id="ent-password-confirm">
+                  <input matInput formControlName="ConfirmpasswordEntreprise"  type="password" placeholder="Password" required="" id="ent-password-confirm">
                   <div class="invalid-feedback">Passwords do not match!</div>
                 </mat-form-field>
                 <br>
@@ -117,6 +113,13 @@
           </mat-tab-group>
           <br>
         </mat-tab>
+ <!--___________________________________________________________________________________________-->
+<!--____________________________________________________________________________________________-->
+<!--______________________________Partie Etudiant_______________________________________________-->
+<!--____________________________________________________________________________________________-->
+<!--____________________________________________________________________________________________-->
+<!--____________________________________________________________________________________________-->
+
         <mat-tab label="Etudiant">
           <ng-template mat-tab-label>
             <mat-icon class="example-tab-icon"><img src = "../../assets/etudiant-diplome.png" width="35px" height="35px"></mat-icon>
