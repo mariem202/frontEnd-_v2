@@ -24,11 +24,15 @@ export class AuthComponent  implements OnInit {
   constructor(private _service :AuthenticationServiceService,private  _router:Router) { }
 
   ngOnInit(): void {
+    localStorage.setItem("FirstName","local -mimi");
+    sessionStorage.setItem("Session ","Session- mimi");
+
   }
 
   login() {
     this._service.loginUser(this.user).subscribe(
       data => {
+        sessionStorage.setItem('name',this.user.username);
         //the back response is respondin but error in parseing it in data
         console.log(data);
         console.log("response received");
