@@ -17,5 +17,5 @@ export class AuthenticationServiceService {
     return this._http.post<User>("http://localhost:8080/signup",user);
   }
   getUserByName(name:String):Observable<User>{
-    return this._http.post<User>("http://localhost:8080/FindByName",name);}
+    return this._http.get<any>("http://localhost:8080/FindByName/"+name);}
 }
