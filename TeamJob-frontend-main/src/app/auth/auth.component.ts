@@ -36,6 +36,7 @@ export class AuthComponent  implements OnInit {
         //the back response is respondin but error in parseing it in data
         console.log(data);
         console.log("response received");
+        localStorage.setItem('isConnected', 'true');  
         this._router.navigate(["/acceuil"])},
       error =>{
 
