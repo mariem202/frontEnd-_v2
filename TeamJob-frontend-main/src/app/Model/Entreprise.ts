@@ -1,7 +1,7 @@
 
 
 export class Entreprise
-{
+{id;
   idEntreprise : Number;
   entrepriseName:String;
   Name: String;
