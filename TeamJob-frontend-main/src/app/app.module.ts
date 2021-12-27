@@ -28,8 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     AcceilComponent,
     NavlogComponent,
-    AuthComponent
-
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
